@@ -511,7 +511,7 @@ def main(argv):
 
     #generateListEmpty()
     generateHistoric()
-    #fillEmptyInfo()
+    fillEmptyInfo()
 
     #Borrar campo prediccion de todos los documentos
     #temperatura.update_many({}, {"$unset": {"prediccion":1}})
