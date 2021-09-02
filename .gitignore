@@ -136,3 +136,6 @@ markdown/*
 !markdown/header.sty
 !markdown/plantillaInformeAviar.md
 
+# virtual enviroment
+my_env/*
+
