@@ -506,11 +506,11 @@ def cronTemp():
 
 def main(argv):
     # Construye la coleccion de estaciones
-    # estaciones()
+    estaciones()
     #listStacion()
 
     #generateListEmpty()
-    # generateHistoric()
+    generateHistoric()
     #fillEmptyInfo()
 
     #Borrar campo prediccion de todos los documentos

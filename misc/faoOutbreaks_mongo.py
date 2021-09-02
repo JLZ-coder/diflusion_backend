@@ -14,7 +14,7 @@ outbreaks = db.outbreaks
 
 #Load csv outbreaks (2017-2021)
 def loadOutbreaks():
-    file = 'data/AvianInfluenza_1.csv'
+    file = 'data/AvianInfluenza.csv'
     df = pd.read_csv(file, sep=",")
     #Renombramos
     df.rename(columns={'Event ID': 'oieid', 'Disease': 'disease', 'Serotype': 'serotype', 'Locality': 'city', 
@@ -179,8 +179,8 @@ def downloadOutbreaks():
 
 def main(argv):
 
-    # loadOutbreaks()
-    downloadOutbreaks()
+    loadOutbreaks()
+    # downloadOutbreaks()
 
     return 0
 

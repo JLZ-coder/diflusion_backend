@@ -1,9 +1,8 @@
 import pandas as pd
-import pymongo
 from pymongo import MongoClient
 import json
 import pygeohash as geohash
-import geojsonComarcas
+# import geojsonComarcas
 
 # Mete las comarcas en mongodb
 
@@ -29,12 +28,12 @@ provincia = []
 CODAUTO = []
 comAutonoma = []
 CPROyMUN = []
-coordenadas = []
+# coordenadas = []
 geohashC = []
 
 for comarca in leer['features']:
     com_sgsa_n.append(comarca['properties']['comarca'])
-    coordenadas.append(comarca['geometry']['coordinates'])
+    # coordenadas.append(comarca['geometry']['coordinates'])
     CPRO.append(comarca['properties']['CPRO'])
     provincia.append(comarca['properties']['provincia'])
     CODAUTO.append(comarca['properties']['CODAUTO'])
@@ -52,11 +51,12 @@ df['provincia'] = provincia
 df['CODAUTO'] = CODAUTO
 df['comAutonoma'] = comAutonoma
 df['CPROyMUN'] = CPROyMUN
-df['coordinates'] = coordenadas
+# df['coordinates'] = coordenadas
 df['geohash'] = geohashC
 
 #funcion para generar el cuadrante de cada comarca
-df = geojsonComarcas.coordinatesFunc(df)
+# df = geojsonComarcas.coordinatesFunc(df)
+
 #Insercion de los datos en la base de datos
 client= MongoClient('mongodb://localhost:27017/')
 db = client.lv

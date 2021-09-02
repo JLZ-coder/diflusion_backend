@@ -11,22 +11,6 @@ from factories.ReportBuilder import ReportBuilder
 from datetime import datetime, timedelta, date
 from model.gdriveUploader import gDriveUploader
 
-# def toolOffLine(control):
-
-#     #Abrir y validar con el esquema
-#     f = open("exampleTool.json", "r")
-#     content = f.read()
-#     schemaJson = json.loads(content)
-
-#     #Ejecutar n * m veces el modelo
-#     for i in schemaJson['rangeOfValues']['temporaryWindow']:
-#         for j in schemaJson['rangeOfValues']['probBirds']:
-#             control.changeProb(j)
-#             geojson_alerta = control.run(datetime.strptime(schemaJson['date'], '%Y-%m-%d'), schemaJson['weeks'], i*4)
-
-#     #Procesar los datos y generar en Markdown las gráficas
-
-
 
 def main(argv):
     
@@ -46,7 +30,7 @@ def main(argv):
     start = datetime(2021, 3, 8)
     # control.runOfflineTool()
     # Comenzando desde 52 semanas atras, un anio atras
-    control.runOnlineTool(52)
+    control.runOnlineTool(2)
 
     return 0
 
